@@ -11,7 +11,6 @@ import {
     deleteDoc,
     doc,
     getDoc,
-    getDocs,
     orderBy,
     query,
     setDoc,

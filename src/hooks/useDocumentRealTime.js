@@ -1,7 +1,7 @@
 import { onSnapshot } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 
-const useDocumentRealTime = (collectionQuery, ...conditions) => {
+const useDocumentRealTime = (document, ...conditions) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [data, setData] = useState(null);
@@ -10,7 +10,7 @@ const useDocumentRealTime = (collectionQuery, ...conditions) => {
         setLoading(true);
 
         const unsub = onSnapshot(
-            collectionQuery(),
+            document(),
             res => {
                 if (!res.exists()) {
                     setError(new Error('No project found!'));
