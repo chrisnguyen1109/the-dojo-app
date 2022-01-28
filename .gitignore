@@ -21,3 +21,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.env
+.prettierrc
+
+.firebaserc
+firebase.json
+.firebase
+
+avatar
